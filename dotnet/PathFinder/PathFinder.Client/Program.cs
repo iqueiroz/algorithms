@@ -56,7 +56,7 @@ namespace PathFinder.Client
                     if(found)
                         continue;
                     var algorithm = CreateSearchAlgorithm(graphs[j]);
-                    Node start = null, goal = null;
+                    Node start = Node.None, goal = Node.None;
                     try
                     {
                         start = graphs[j].GetNode(pointA.Row, pointA.Column);
@@ -66,7 +66,7 @@ namespace PathFinder.Client
                     {
 
                     }
-                    if(start != null && goal != null)
+                    if(!start.Equals(Node.None) && !goal.Equals(Node.None))
                     {
                         var reachable = algorithm.IsReacheable(start, goal);
                         if(reachable)

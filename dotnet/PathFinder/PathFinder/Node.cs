@@ -2,8 +2,10 @@ using System;
 
 namespace PathFinder
 {
-    public class Node
+    public struct Node
     {
+        public static Node None = new Node(-1,-1,-1);
+
         public int Row { get; private set; }
         public int Column { get; private set; }
         public int Id { get; private set; }

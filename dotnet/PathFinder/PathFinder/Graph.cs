@@ -32,7 +32,7 @@ namespace PathFinder
             Node node = new Node(CalculateNodeIndex(row, column, this._totalColumns), row, column);
 
             this._nodes.Add(node.Id, node);
-            this._adjacencyList.Add(node.Id, new List<Node>());
+            this._adjacencyList.Add(node.Id, new List<Node>(4));
             return node;
 
         }
