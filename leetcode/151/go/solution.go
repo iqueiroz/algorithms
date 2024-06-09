@@ -5,10 +5,7 @@ import (
 )
 
 func reverseWords(s string) string {
-	splitfunc := func(c rune) bool {
-		return c == ' '
-	}
-	splited := strings.FieldsFunc(s, splitfunc)
+	splited := strings.Fields(s)
 
 	var sb strings.Builder
 	for i := len(splited) - 1; i >= 0; i-- {
